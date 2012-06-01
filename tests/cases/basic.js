@@ -92,7 +92,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail') === 'http://mail.sample.com');
     },
 
-    'test if we can use a simple config with dimensions and conext device:ipad': function () {
+    'test if we can use a simple config with dimensions and context device:ipad': function () {
 
         var config = mdc.create(),
             context;
@@ -111,7 +111,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://ipad.mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext device:iphone': function () {
+    'test if we can use a simple config with dimensions and context device:iphone': function () {
 
         var config = mdc.create(),
             context;
@@ -130,7 +130,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://iphone.mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext device:iphone&lang:fr_CA': function () {
+    'test if we can use a simple config with dimensions and context device:iphone&lang:fr_CA': function () {
 
         var config = mdc.create(),
             context;
@@ -150,7 +150,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://iphone.mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext device:iphone&lang:en_US': function () {
+    'test if we can use a simple config with dimensions and context device:iphone&lang:en_US': function () {
 
         var config = mdc.create(),
             context;
@@ -170,7 +170,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://iphone.mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext lang:en_US': function () {
+    'test if we can use a simple config with dimensions and context lang:en_US': function () {
 
         var config = mdc.create(),
             context;
@@ -189,7 +189,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext lang:fr': function () {
+    'test if we can use a simple config with dimensions and context lang:fr': function () {
 
         var config = mdc.create(),
             context;
@@ -208,7 +208,7 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail', context) === 'http://fr.mail.sample.com', config.get('links.mail', context));
     },
 
-    'test if we can use a simple config with dimensions and conext lang:fr&device:desktop': function () {
+    'test if we can use a simple config with dimensions and context lang:fr&device:desktop': function () {
 
         var config = mdc.create(),
             context;
