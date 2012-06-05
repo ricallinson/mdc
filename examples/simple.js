@@ -23,7 +23,7 @@
 
 "use strict";
 
-var config = require('../lib').create([
+var config = require('../').create([
     {
         "env": {
             "dev": null,
