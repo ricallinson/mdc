@@ -25,7 +25,7 @@
 
 var Y = require('yui').use('test');
 
-var mdc = require('../../lib/engine');
+var mdc = require('../../lib');
 var dim = require('../fixtures/dimensions');
 var cfg = require('../fixtures/configs');
 
