@@ -11,9 +11,9 @@
         "node": ">= 0.6.0 < 0.7.0"
     },
     "dependencies": {
-        "avrojs": "0.0.1"
+        "avrojs": "0.0.x"
     },
     "devDependencies": {
-        "yui": "3.6.*"
+        "yui": "3.5.x"
     }
 }
