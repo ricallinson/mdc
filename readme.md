@@ -128,8 +128,8 @@ Then there's a whole world of crazy when you start changing things based on _loc
         lang: "en_GB"
     });
 
-    cfg.get('', {env: 'dev'});
-    cfg.get('', {env: 'qa', lang: 'en_GB'});
-    cfg.get('', {env: 'prod', lang: 'en_GB', device: 'itouch'});
-    cfg.get('', {device: 'large', lang: 'en_CA'});
+    cfg.get('source', {env: 'dev'}); // http://localhost/test/news/
+    cfg.get('title', {env: 'qa', lang: 'en_GB'}); // It's a crazy world out there!
+    cfg.get('show', {env: 'prod', lang: 'en_GB', device: 'itouch'}); // 5
+    cfg.get('title', {device: 'large', lang: 'en_CA'}); // Crazy world, eh!
 
