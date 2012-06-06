@@ -189,9 +189,9 @@ The following examples are shown in [YAML](http://www.yaml.org/).
 
 The following words cannot be used as top level keys in any data structures.
 
-    * dimensions
-    * settings
-    * schema
+* dimensions
+* settings
+* schema
 
 ## Bundle
 
