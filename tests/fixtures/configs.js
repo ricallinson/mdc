@@ -33,6 +33,40 @@ exports.simple = {
     }
 };
 
+exports.simple_schema_good = {
+    "type": "record",
+    "fields": [
+        { "name": "title", "type": "string" },
+        { "name": "data", "type": "string" },
+        { "name": "logo", "type": "string" },
+        { "name": "links", "type": {
+                "type": "record",
+                "fields": [
+                    { "name": "home", "type": "string" },
+                    { "name": "mail", "type": "string" }
+                ]
+            }
+        }
+    ]
+};
+
+exports.simple_schema_bad = {
+    "type": "record",
+    "fields": [
+        { "name": "title", "type": "string" },
+        { "name": "data", "type": "string" },
+        { "name": "logo", "type": "string" },
+        { "name": "links", "type": {
+                "type": "record",
+                "fields": [
+                    { "name": "homs", "type": "string" }, // <- the error is here
+                    { "name": "mail", "type": "string" }
+                ]
+            }
+        }
+    ]
+};
+
 exports.bundle = [
     {
         "settings": ["default"],
