@@ -1,6 +1,6 @@
 # Multi Dimensional Configuration
 
-Simple stuff here.
+Configuration is simple when you have it defined in a chunk of code.
 
     var cfg = require('mdc').create();
 
@@ -11,7 +11,7 @@ Simple stuff here.
 
     cfg.get('title'); // Github
 
-Words will be writen here.
+It gets a bit unwieldy but still usable when you introduce different dimensions to your configuration such as _development_ vs _production_.
 
     var cfg = require('mdc').create([
         {
@@ -30,4 +30,120 @@ Words will be writen here.
     cfg.get('port', {env: 'dev'}); // 3000
     cfg.get('port', {env: 'prod'}); // 80
 
-More words will be writen here too.
+Then there's a whole world of crazy when you start changing things based on _location_, _language_ or _device_ type!
+
+    /*
+     * Dimensions to work with
+     */
+
+    var cfg = require('../').create([
+        {
+            "env": {
+                "dev": null,
+                "qa": null,
+                "prod": null
+            },
+            "device": {
+                "phone": {
+                    "iphone": {
+                        "itouch": null
+                    },
+                    "nexus": null
+                },
+                "desktop": {
+                    "small": null,
+                    "large": null
+                },
+                "tablet": {
+                    "ipad": null,
+                    "galaxy": null
+                }
+            },
+            "lang": {
+                "en": {
+                    "en_US": {
+                        "en_CA": null
+                    },
+                    "en_GB": null
+                }
+            }
+        }
+    ]);
+
+    /*
+     * Default values
+     */
+
+    cfg.set({
+        title: "Crazy World!",
+        more: "Show more",
+        source: "http://world.news.com/",
+        show: 10
+    });
+
+    /*
+     * Title for en_CA
+     */
+
+    cfg.set({
+        title: "Crazy world, eh!"
+    }, {
+        lang: "en_CA"
+    });
+
+    /*
+     * Title for en_GB
+     */
+
+    cfg.set({
+        title: "It's a crazy world out there!"
+    }, {
+        lang: "en_GB"
+    });
+
+    /*
+     * Source for dev
+     */
+
+    cfg.set({
+        source: "http://localhost/test/news/"
+    }, {
+        env: "dev"
+    });
+
+    /*
+     * Source for qa
+     */
+
+    cfg.set({
+        source: "http://qa.my-company.com/news/fixtures/"
+    }, {
+        env: "qa"
+    });
+
+    /*
+     * Show for phone
+     */
+
+    cfg.set({
+        show: 5 // because it's smaller
+    }, {
+        device: "phone"
+    });
+
+    /*
+     * Title for en_GB & phone
+     */
+
+    cfg.set({
+        title: "It's crazy!" // because it's smaller
+    }, {
+        device: "phone",
+        lang: "en_GB"
+    });
+
+    cfg.get('', {env: 'dev'});
+    cfg.get('', {env: 'qa', lang: 'en_GB'});
+    cfg.get('', {env: 'prod', lang: 'en_GB', device: 'itouch'});
+    cfg.get('', {device: 'large', lang: 'en_CA'});
+
