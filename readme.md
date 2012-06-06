@@ -137,14 +137,6 @@ Then there's a whole world of crazy when you start changing things based on _loc
 
 ## API
 
-### Reserved Words
-
-The following words cannot be used as top level keys in any data structures.
-
-    * dimensions
-    * settings
-    * schema
-
 ### create
 
 Simple use;
@@ -191,11 +183,19 @@ Complex use;
 
 # Data Structures
 
-The follow examples are shown in [YAML](http://www.yaml.org/).
+The following examples are shown in [YAML](http://www.yaml.org/).
+
+## Reserved Words
+
+The following words cannot be used as top level keys in any data structures.
+
+    * dimensions
+    * settings
+    * schema
 
 ## Bundle
 
-A _bundle_ is an *array* of *maps* which collectively contain all the information required for the configuration.
+A _bundle_ is an **array** of **maps** which collectively contain all the information required for the configuration.
 
     - dimensions:
     - settings:
@@ -224,7 +224,7 @@ The _settings_ are...
 
 ## Schema
 
-The _schema_ is an [Avro](http://avro.apache.org/) based and...
+The _schema_ uses [Avro](http://avro.apache.org/) and...
 
     - schema:
       - name: settings
