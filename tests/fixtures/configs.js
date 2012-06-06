@@ -39,7 +39,9 @@ exports.simple_schema_good = {
         { "name": "title", "type": "string" },
         { "name": "data", "type": "string" },
         { "name": "logo", "type": "string" },
-        { "name": "links", "type": {
+        {
+            "name": "links",
+            "type": {
                 "type": "record",
                 "fields": [
                     { "name": "home", "type": "string" },
@@ -56,7 +58,9 @@ exports.simple_schema_bad = {
         { "name": "title", "type": "string" },
         { "name": "data", "type": "string" },
         { "name": "logo", "type": "string" },
-        { "name": "links", "type": {
+        {
+            "name": "links",
+            "type": {
                 "type": "record",
                 "fields": [
                     { "name": "homs", "type": "string" }, // <- the error is here
