@@ -92,6 +92,19 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail') === 'http://mail.sample.com');
     },
 
+    'test if we can use bundle settings with dimensions as first argument': function () {
+
+        var config = mdc.create();
+
+        config.setBundle(dim, cfg.bundle);
+
+//        Y.log(JSON.stringify(config.getBundle(),null,4));
+
+        assert.isTrue(config.get('title') === 'Test A');
+        assert.isTrue(config.get('links.home') === 'http://www.sample.com');
+        assert.isTrue(config.get('links.mail') === 'http://mail.sample.com');
+    },
+
     'test if we can use a simple config with dimensions and context device:ipad': function () {
 
         var config = mdc.create(),

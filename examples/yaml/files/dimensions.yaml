@@ -1,0 +1,9 @@
+---
+# Example dimensions file
+
+- env:
+    dev:
+    prod:
+- site:
+    sports:
+    news:

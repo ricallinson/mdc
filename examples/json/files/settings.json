@@ -1,0 +1,15 @@
+[
+    {
+        "settings": ["default"],
+        "title": "Default Title",
+        "host": "http://some.host.com"
+    },
+    {
+        "settings": ["site:news"],
+        "title": "News Title"
+    },
+    {
+        "settings": ["env:dev"],
+        "host": "http://localhost"
+    }
+]

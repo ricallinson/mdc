@@ -1,0 +1,17 @@
+{
+    "name": "mdc-yaml-example",
+    "description": "Multi Dimensional Configuration using YAML files.",
+    "version": "0.0.1",
+    "author": {
+        "name": "Richard S Allinson",
+        "email": "rsa@mounitainmansoftware.com"
+    },
+    "main": "index",
+    "engines": {
+        "node": ">= 0.6.0 < 0.7.0"
+    },
+    "dependencies": {
+        "mdc": "0.0.x",
+        "js-yaml": "0.3.x"
+    }
+}

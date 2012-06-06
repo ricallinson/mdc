@@ -1,0 +1,16 @@
+{
+    "name": "mdc-json-example",
+    "description": "Multi Dimensional Configuration using JSON files.",
+    "version": "0.0.1",
+    "author": {
+        "name": "Richard S Allinson",
+        "email": "rsa@mounitainmansoftware.com"
+    },
+    "main": "index",
+    "engines": {
+        "node": ">= 0.6.0 < 0.7.0"
+    },
+    "dependencies": {
+        "mdc": "0.0.x"
+    }
+}

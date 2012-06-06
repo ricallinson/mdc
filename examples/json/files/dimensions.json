@@ -1,0 +1,14 @@
+[
+    {
+        "env": {
+            "dev": null,
+            "prod": null
+        }
+    },
+    {
+        "site": {
+            "sports": null,
+            "news": null
+        }
+    }
+]
