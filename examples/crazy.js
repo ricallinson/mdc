@@ -33,7 +33,9 @@ var cfg = require('../').create([
             "dev": null,
             "qa": null,
             "prod": null
-        },
+        }
+    },
+    {
         "device": {
             "phone": {
                 "iphone": {
@@ -49,7 +51,9 @@ var cfg = require('../').create([
                 "ipad": null,
                 "galaxy": null
             }
-        },
+        }
+    },
+    {
         "lang": {
             "en": {
                 "en_US": {
@@ -120,6 +124,16 @@ cfg.set({
     show: 5 // because it's smaller
 }, {
     device: "phone"
+});
+
+/*
+ * Show for desktop
+ */
+
+cfg.set({
+    show: 15 // because it's larger
+}, {
+    device: "desktop"
 });
 
 /*

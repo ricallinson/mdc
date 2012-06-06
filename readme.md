@@ -35,14 +35,16 @@ Then there's a whole world of crazy when you start changing things based on _loc
     /*
      * Dimensions to work with
      */
-
+    
     var cfg = require('../').create([
         {
             "env": {
                 "dev": null,
                 "qa": null,
                 "prod": null
-            },
+            }
+        },
+        {
             "device": {
                 "phone": {
                     "iphone": {
@@ -58,7 +60,9 @@ Then there's a whole world of crazy when you start changing things based on _loc
                     "ipad": null,
                     "galaxy": null
                 }
-            },
+            }
+        },
+        {
             "lang": {
                 "en": {
                     "en_US": {
@@ -69,7 +73,7 @@ Then there's a whole world of crazy when you start changing things based on _loc
             }
         }
     ]);
-
+    
     /*
      * Default values
      */
@@ -129,6 +133,16 @@ Then there's a whole world of crazy when you start changing things based on _loc
         show: 5 // because it's smaller
     }, {
         device: "phone"
+    });
+
+    /*
+     * Show for desktop
+     */
+
+    cfg.set({
+        show: 15 // because it's larger
+    }, {
+        device: "desktop"
     });
 
     /*
