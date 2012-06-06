@@ -23,7 +23,7 @@
 
 "use strict";
 
-var config = require('../').create([
+var cfg = require('../').create([
     {
         "env": {
             "dev": null,
@@ -32,10 +32,10 @@ var config = require('../').create([
     }
 ]);
 
-config.set({port: 8080}); // default
-config.set({port: 3000}, {env: 'dev'});
-config.set({port: 80}, {env: 'prod'});
+cfg.set({port: 8080}); // default
+cfg.set({port: 3000}, {env: 'dev'});
+cfg.set({port: 80}, {env: 'prod'});
 
-console.log(config.get('port')); // default
-console.log(config.get('port', {env: 'dev'}));
-console.log(config.get('port', {env: 'prod'}));
+console.log(cfg.get('port')); // default
+console.log(cfg.get('port', {env: 'dev'}));
+console.log(cfg.get('port', {env: 'prod'}));

@@ -1,8 +1,19 @@
 # Multi Dimensional Configuration
 
+Simple stuff here.
+
+    var cfg = require('mdc').create();
+
+    cfg.set({
+        title: 'Github',
+        host: 'http://github.com'
+    });
+
+    console.log(cfg.get('title')); // Github
+
 Words will be writen here.
 
-    var config = require('mdc').create([
+    var cfg = require('mdc').create([
         {
             "env": {
                 "dev": null,
@@ -11,12 +22,12 @@ Words will be writen here.
         }
     ]);
 
-    config.set({port: 8080}); // default
-    config.set({port: 3000}, {env: 'dev'});
-    config.set({port: 80}, {env: 'prod'});
+    cfg.set({port: 8080}); // default
+    cfg.set({port: 3000}, {env: 'dev'});
+    cfg.set({port: 80}, {env: 'prod'});
 
-    console.log(config.get('port')); // default
-    console.log(config.get('port', {env: 'dev'}));
-    console.log(config.get('port', {env: 'prod'}));
+    console.log(cfg.get('port')); // 8080
+    console.log(cfg.get('port', {env: 'dev'})); // 3000
+    console.log(cfg.get('port', {env: 'prod'})); // 80
 
 More words will be writen here too.
