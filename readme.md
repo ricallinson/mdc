@@ -133,3 +133,58 @@ Then there's a whole world of crazy when you start changing things based on _loc
     cfg.get('show', {env: 'prod', lang: 'en_GB', device: 'itouch'}); // 5
     cfg.get('title', {device: 'large', lang: 'en_CA'}); // Crazy world, eh!
 
+# I believe I did, Bob.
+
+## API
+
+### create
+
+Simple use;
+
+    var cfg = mdc.create();
+
+Complex use;
+
+    var cfg = mdc.create(dimensions);
+
+### set
+
+Simple use;
+
+    mdc.set({key: 'value'});
+
+Complex use;
+
+    mdc.set({path: {to: {key: 'value'}}}, {context: 'value'});
+
+### get
+
+Simple use;
+
+    mdc.get('key');
+
+Complex use;
+
+    mdc.get('path.to.key', {context: 'value'});
+
+### setBundle
+
+Simple use;
+
+    mdc.setBundle(dimensions, settings);
+
+Complex use;
+
+    mdc.setBundle(bundle);
+
+### getBundle
+
+    var bundle = mdc.getBundle();
+
+# Data Stuctures
+
+## Dimensions
+
+## Settings
+
+## Schema
