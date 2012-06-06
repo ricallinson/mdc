@@ -74,9 +74,7 @@ Then there's a whole world of crazy when you start changing things based on _loc
         }
     ]);
     
-    /*
-     * Default values
-     */
+    // Default values
 
     cfg.set({
         title: "Crazy World!",
@@ -85,9 +83,7 @@ Then there's a whole world of crazy when you start changing things based on _loc
         show: 10
     });
 
-    /*
-     * Title for en_CA
-     */
+    // Special values
 
     cfg.set({
         title: "Crazy world, eh!"
@@ -95,19 +91,11 @@ Then there's a whole world of crazy when you start changing things based on _loc
         lang: "en_CA"
     });
 
-    /*
-     * Title for en_GB
-     */
-
     cfg.set({
         title: "It's a crazy world out there!"
     }, {
         lang: "en_GB"
     });
-
-    /*
-     * Source for dev
-     */
 
     cfg.set({
         source: "http://localhost/test/news/"
@@ -115,19 +103,11 @@ Then there's a whole world of crazy when you start changing things based on _loc
         env: "dev"
     });
 
-    /*
-     * Source for qa
-     */
-
     cfg.set({
         source: "http://qa.my-company.com/news/fixtures/"
     }, {
         env: "qa"
     });
-
-    /*
-     * Show for phone
-     */
 
     cfg.set({
         show: 5 // because it's smaller
@@ -135,19 +115,11 @@ Then there's a whole world of crazy when you start changing things based on _loc
         device: "phone"
     });
 
-    /*
-     * Show for desktop
-     */
-
     cfg.set({
         show: 15 // because it's larger
     }, {
         device: "desktop"
     });
-
-    /*
-     * Title for en_GB & phone
-     */
 
     cfg.set({
         title: "It's crazy!" // because it's smaller
