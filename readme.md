@@ -137,6 +137,14 @@ Then there's a whole world of crazy when you start changing things based on _loc
 
 ## API
 
+### Reserved Words
+
+The following words cannot be used as top level keys in any data structures.
+
+    * dimensions
+    * settings
+    * schema
+
 ### create
 
 Simple use;
@@ -181,10 +189,47 @@ Complex use;
 
     var bundle = mdc.getBundle();
 
-# Data Stuctures
+# Data Structures
+
+The follow examples are shown in [YAML](http://www.yaml.org/).
+
+## Bundle
+
+A _bundle_ is an *array* of *maps* which collectively contain all the information required for the configuration.
+
+    - dimensions:
+    - settings:
+    - schema:
 
 ## Dimensions
 
+The _dimensions_ are...
+
+    - dimensions:
+        - region:
+            us:
+            jp:
+        - site:
+            sports:
+            news:
+
 ## Settings
 
+The _settings_ are...
+
+    - settings: [default]
+      data:
+        b: 5
+        y: 7
+
 ## Schema
+
+The _schema_ is an [Avro](http://avro.apache.org/) based and...
+
+    - schema:
+      - name: settings
+        type: record
+        fields:
+          - name: data
+            type: map
+            values: int
