@@ -1,6 +1,6 @@
 {
     "name": "mdc",
-    "description": "Multi Dimensional Configuration.",
+    "description": "Multi Dimensional Configuration",
     "version": "0.0.2",
     "author": {
         "name": "Richard S Allinson",
@@ -15,5 +15,10 @@
     },
     "devDependencies": {
         "yui": "3.5.x"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/capecodehq/mdc.git"
+    },
+    "license": "MIT"
 }
