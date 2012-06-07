@@ -169,13 +169,7 @@ Complex use;
 
 ### setBundle
 
-Simple use;
-
     mdc.setBundle(dimensions, settings, schema);
-
-Complex use;
-
-    mdc.setBundle(bundle);
 
 ### getBundle
 
