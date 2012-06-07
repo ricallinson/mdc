@@ -215,6 +215,9 @@ The _settings_ are...
       data:
         b: 5
         y: 7
+    - settings: [context:key]
+      data:
+        b: 10
 
 ## Schema
 
