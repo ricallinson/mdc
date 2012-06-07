@@ -218,6 +218,9 @@ The _settings_ are...
     - settings: [context:key]
       data:
         b: 10
+    - settings: [context:key, context:key]
+      data:
+        y: 14
 
 ## Schema
 
