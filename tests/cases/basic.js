@@ -66,24 +66,9 @@ var testCase = new Y.Test.Case({
         assert.isTrue(config.get('links.mail') === 'http://mail.sample.com');
     },
 
-    'test if we can use a bundle config with dimensions last': function () {
-
-        var config = mdc.create();
-
-        config.setBundle(cfg.bundle.concat([{'dimensions': dim}]));
-
-//        Y.log(JSON.stringify(config.getBundle(),null,4));
-
-        assert.isTrue(config.get('title') === 'Test A');
-        assert.isTrue(config.get('links.home') === 'http://www.sample.com');
-        assert.isTrue(config.get('links.mail') === 'http://mail.sample.com');
-    },
-
     'test if we can use a bundle config with dimensions first': function () {
 
-        var config = mdc.create();
-
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        var config = mdc.create(dim, cfg.bundle);
 
 //        Y.log(JSON.stringify(config.getBundle(),null,4));
 
@@ -94,9 +79,7 @@ var testCase = new Y.Test.Case({
 
     'test if we can use bundle settings with dimensions as first argument': function () {
 
-        var config = mdc.create();
-
-        config.setBundle(dim, cfg.bundle);
+        var config = mdc.create(dim, cfg.bundle);
 
 //        Y.log(JSON.stringify(config.getBundle(),null,4));
 
@@ -110,7 +93,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'device': 'ipad'
@@ -129,7 +112,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'device': 'iphone'
@@ -148,7 +131,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'device': 'iphone',
@@ -168,7 +151,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'device': 'iphone',
@@ -188,7 +171,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'lang': 'en_US'
@@ -207,7 +190,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'lang': 'fr'
@@ -226,7 +209,7 @@ var testCase = new Y.Test.Case({
         var config = mdc.create(),
             context;
 
-        config.setBundle([{'dimensions': dim}].concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle);
 
         context = {
             'lang': 'fr',

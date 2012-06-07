@@ -47,9 +47,7 @@ var testCase = new Y.Test.Case({
 
         var config = mdc.create();
 
-        config.setBundle([{'dimensions': dim}]
-              .concat([{'schema': cfg.simple_schema_good}])
-              .concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle, cfg.simple_schema_good);
 
 //        Y.log(JSON.stringify(config.get(),null,4));
 
@@ -60,9 +58,7 @@ var testCase = new Y.Test.Case({
 
         var config = mdc.create();
 
-        config.setBundle([{'dimensions': dim}]
-              .concat([{'schema': cfg.simple_schema_bad}])
-              .concat(cfg.bundle));
+        config.setBundle(dim, cfg.bundle, cfg.simple_schema_bad);
 
 //        Y.log(JSON.stringify(config.get(),null,4));
 

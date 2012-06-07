@@ -145,7 +145,7 @@ Simple use;
 
 Complex use;
 
-    var cfg = mdc.create(dimensions);
+    var cfg = mdc.create(dimensions, settings, schema);
 
 ### set
 
@@ -171,7 +171,7 @@ Complex use;
 
 Simple use;
 
-    mdc.setBundle(dimensions, settings);
+    mdc.setBundle(dimensions, settings, schema);
 
 Complex use;
 
