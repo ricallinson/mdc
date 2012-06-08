@@ -139,9 +139,4 @@ var testCase = new Y.Test.Case({
     }
 });
 
-Y.log('Starting');
-
-Y.Test.Runner.add(testCase);
-
-//run all tests
-Y.Test.Runner.run();
+module.exports = testCase;

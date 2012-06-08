@@ -21,49 +21,54 @@
 //    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 //    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-/*jslint nomen:true*/
-
 "use strict";
 
-var Y = require('yui').use('test');
+/*
+ * Module dependencies.
+ */
 
-var mdc = require('../../');
-var dim = require('../fixtures/dimensions');
-var cfg = require('../fixtures/configs');
+var fs = require('fs'),
+    basename = require('path').basename,
+    Y = require('yui').use('test');
 
-var assert = Y.Test.Assert;
+/*
+ * All the test cases
+ */
 
-var testCase = new Y.Test.Case({
+var cases = [];
 
-    name: "mdc subs",
+/**
+ * Auto-load all the cases.
+ */
 
-    _should: {
-        error: {
-            'test simple schema fail': true
-        }
-    },
+fs.readdirSync(__dirname + '/cases').forEach(function (filename) {
 
-    'test simple schema success': function () {
-
-        var config = mdc.create();
-
-        config.setBundle(dim, cfg.bundle, cfg.simple_schema_good);
-
-//        Y.log(JSON.stringify(config.get(),null,4));
-
-        assert.isTrue(config.get('logo') === 'sample.png', config.get('logo'));
-    },
-
-    'test simple schema fail': function () {
-
-        var config = mdc.create();
-
-        config.setBundle(dim, cfg.bundle, cfg.simple_schema_bad);
-
-//        Y.log(JSON.stringify(config.get(),null,4));
-
-        assert.isTrue(config.get('logo') === 'sample.png', config.get('logo'));
+    if (!/\.js$/.test(filename)) {
+        return;
     }
+
+    var name = basename(filename, '.js');
+
+    /*
+     * We store the name of the test-case so it can be filtered later.
+     */
+    cases.push({
+        name: name,
+        test: require('./cases/' + name)
+    });
+
 });
 
-module.exports = testCase;
+/*
+ * Attach all the tests we want to run to the runner.
+ */
+
+cases.forEach(function (testCase) {
+    Y.Test.Runner.add(testCase.test);
+});
+
+/*
+ * run all tests
+ */
+
+Y.Test.Runner.run();
