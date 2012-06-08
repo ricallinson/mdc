@@ -1,5 +1,7 @@
 # Multi Dimensional Configuration
 
+[![Build Status](https://secure.travis-ci.org/capecodehq/mdc.png?branch=master)](http://travis-ci.org/capecodehq/mdc)
+
 Configuration is simple when you have it defined in a chunk of code.
 
     var cfg = require('mdc').create();
