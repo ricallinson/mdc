@@ -37,6 +37,17 @@ var fs = require('fs'),
 
 var cases = [];
 
+/*
+ * Make sure we fail when we fail.
+ */
+
+process.on("exit", function(){
+    var results = Y.Test.Runner.getResults();
+    if (results && results.failed){
+        process.exit(1);
+    }
+});
+
 /**
  * Auto-load all the cases.
  */
