@@ -11,10 +11,10 @@
         "test": "node ./tests/run.js"
     },
     "engines": {
-        "node": ">= 0.6.0 < 0.7.0"
+        "node": ">= 0.6.0"
     },
     "dependencies": {
-        "avrojs": "0.0.x"
+        "avrojs": "*"
     },
     "devDependencies": {
         "yui": "3.5.x"
