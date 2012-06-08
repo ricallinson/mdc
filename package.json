@@ -7,6 +7,9 @@
         "email": "rsa@mounitainmansoftware.com"
     },
     "main": "index",
+    "scripts": {
+        "test": "node ./tests/run.js"
+    },
     "engines": {
         "node": ">= 0.6.0 < 0.7.0"
     },
